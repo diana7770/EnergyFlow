@@ -3,7 +3,22 @@ html {
 }
 body {
   font-family: "DM Sans";
+  background-color: rgb(246, 246, 246);
+  padding: 20px;
+  @media screen and (min-width: 768px) {
+    padding: 16px;
+  }
 }
 button {
   cursor: pointer;
+}
+.container {
+  border-radius: 50px;
+  width: 335px;
+  @media screen and (min-width: 768px) {
+    width: 736px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 1408px;
+  }
 }
