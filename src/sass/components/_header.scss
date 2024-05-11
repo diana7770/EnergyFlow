@@ -1,8 +1,6 @@
 .header {
   position: absolute;
   top: 40px;
-  right: 64px;
-  //   left: 64px;
 }
 .header .container {
   display: flex;
@@ -11,4 +9,65 @@
 }
 .header__list {
   display: flex;
+  margin-right: 48px;
+}
+
+.header__logo {
+  color: #1b1b1b;
+  font-family: "DM Sans";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.56px;
+  margin-left: 48px;
+  margin-right: 397px;
+}
+
+.header__item {
+  display: flex;
+  padding: 8px;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(126, 132, 127, 0.2);
+  margin-left: 12px;
+}
+
+.header__link svg {
+  fill: #7e847f;
+}
+
+.header-block {
+  width: 211px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 60px;
+  background: #7e847f;
+  display: flex;
+  padding: 6px 26px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-right: 300px;
+}
+
+.header__btn {
+  width: 96px;
+  height: 36px;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  padding: 6px 26px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: #7e847f;
+  color: #f6f6f6;
+}
+
+.header__btn:hover {
+  border-radius: 30px;
+  background: #fff;
+  color: #1b1b1b;
 }
