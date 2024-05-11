@@ -1,0 +1,56 @@
+.norm__img {
+    width: 704px;
+    height: 302px;
+    border-radius: 50px;
+}
+.text-norm-box {
+    display: flex;
+    width: 704px;
+height: 302px;
+border-radius: 50px;
+background: #1B1B1B;
+padding-top: 64px;
+padding-left: 98px;
+}
+
+
+.norm {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topText {
+    color: $BgBlock;
+font-weight: 500;
+line-height: 32px;
+}
+.up-meonText {
+    color: rgba(246, 246, 246, 0.60);
+
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding-top: 2px;
+}
+.main-text {
+    color: rgba(246, 246, 246, 0.60);
+
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    padding-bottom: 64px;
+    padding-right: 64px;
+    padding-top: 25px;
+}
+
+.img-svg {
+    width: 34px;
+    height: 32px;
+    margin-right: 16px;
+}
