@@ -13,6 +13,8 @@ button {
   cursor: pointer;
 }
 .container {
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 50px;
   width: 335px;
   @media screen and (min-width: 768px) {
