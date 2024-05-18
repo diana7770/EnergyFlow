@@ -1,25 +1,53 @@
 .quote__img {
-    width: 704px;
-height: 302px;
+    width: 335px;
+    height: 272px;
 border-radius: 50px;
+@media screen and (min-width: 768px) {
+    width: 736px;
+    height: 302px;
+    
+
+}
+@media screen and (min-width: 1440px) {
+    width: 704px;
+    height: 302px;
+
+}
 }
 .quote {
     margin-top: 16px;
     margin-bottom: 16px;
-display: flex;
-justify-content: center;
-align-items: center;
+    @media screen and (min-width: 1440px) {
+        display: flex;
+        
+    
+    }
+
 }
 
 .awdawd{
 
     display: flex;
 }
+
 .quote-imgbb{
+    margin-top: 40px;
+    margin-left: 251px;
+    width: 28px;
+height: 28px;
+ 
+@media screen and (min-width: 768px) {
+    width: 48px;
+    height: 48px;
+    margin-left: 512px;
     margin-top: 32px;
+
+}
+@media screen and (min-width: 1440px) {
     margin-left: 498px;
     width: 48px;
-height: 48px;
+    height: 48px;
+}
 }
 .text-quote-box {
     padding-left: 16px;
@@ -27,24 +55,47 @@ height: 48px;
 .svg-text{
     background: #7E847F;
     border-radius: 50px;
-      width: 704px;
-height: 302px;
 
-padding-top: 16px;
-padding-left: 98px;
+    padding-left: 20px;
+    width: 335px;
+    height: 272px;
+
+@media screen and (min-width: 768px) {
+    width: 736px;
+    height: 302px;
+    padding-top: 16px;
+padding-left:80px;
+
+}
+@media screen and (min-width: 1440px) {
+padding-left: 82px;
+width: 704px;
+height: 302px;
+}
 }
 
 .text-up-main {
-    color: #F6F6F6;
-padding-bottom: 16px;
-    font-feature-settings: 'clig' off, 'liga' off;
    
+    color: #F6F6F6;
+    padding-bottom: 14px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    @media screen and (min-width: 768px) {
+        padding-bottom: 16px;
+        font-size: 24px;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: "DM Sans";
+    }
+    
 }
 .text {
     color: rgba(246, 246, 246, 0.60);
-    padding-bottom: 25px;
+    padding-bottom: 14px;
     padding-right: 64px;
-   
+    @media screen and (min-width: 768px) {
+        padding-bottom: 25px;
+    
+
+    }
 }
 
 
