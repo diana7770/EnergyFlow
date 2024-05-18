@@ -1,42 +1,90 @@
 .hero .container {
   display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 .hero__img {
-  width: 50vw;
+  @media screen and (min-width: 768px) {
+    height: 100%;
+    width: 248px;
+  }
+  @media screen and (min-width: 1440px) {
+    height: auto;
+    width: 50vw;
+  }
 }
 .hero-block {
   position: relative;
 }
 .hero__list {
-  max-width: 196px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
   position: absolute;
-  bottom: 32px;
-  left: 48px;
+  left: 10px;
+  bottom: 20px;
+  max-width: 141px;
+  gap: 4px;
+  @media screen and (min-width: 768px) {
+    max-width: 196px;
+    gap: 8px;
+    left: 20px;
+    bottom: 64px;
+  }
+  @media screen and (min-width: 1440px) {
+    bottom: 32px;
+    left: 48px;
+  }
 }
 .hero__item {
   outline: 1px solid rgba(246, 246, 246, 0.3);
   border-radius: 30px;
-  padding: 4px 16px;
+  padding: 4px 10px;
+  @media screen and (min-width: 768px) {
+    padding: 4px 16px;
+  }
 }
 .hero__text {
   color: $titleColor;
-  font-size: 16px;
+  font-size: 12px;
+  line-height: 14px;
   font-weight: 400;
-  line-height: 24px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .hero-content {
-  padding: 225px 33px 241px 32px;
+  background-color: $BgBlock;
+  padding: 60px 20px 81px 20px;
+  border-radius: 30px;
+  margin-top: 20px;
+  @media screen and (min-width: 768px) {
+    padding: 231px 32px 192px 32px;
+    border-radius: 0px 50px 50px 50px;
+    margin-top: 0;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 225px 33px 241px 32px;
+  }
 }
 .hero__slogan {
-  font-size: 120px;
-  font-weight: 400;
-  line-height: 115px;
-  letter-spacing: -2%;
   color: $textColor;
-  margin-bottom: 25px;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: -2%;
+  margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    font-size: 98px;
+    line-height: 95px;
+    margin-bottom: 25px;
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 120px;
+    line-height: 115px;
+  }
 }
 .hero__subtext {
   font-style: italic;
@@ -44,8 +92,16 @@
 }
 .hero__desc {
   color: $textColor;
-  font-size: 18px;
+  font-size: 14px;
+  line-height: 18px;
   font-weight: 400;
-  line-height: 24px;
   letter-spacing: -1%;
+  text-wrap: balance;
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  @media screen and (min-width: 1440px) {
+    text-wrap: wrap;
+  }
 }
