@@ -14,7 +14,7 @@ border-radius: 50px;
 
 }
 }
-.quote {
+.quote .container {
     margin-top: 16px;
     margin-bottom: 16px;
     justify-content: center;
@@ -27,22 +27,21 @@ border-radius: 50px;
 
 }
 
-.awdawd{
+.text-boxes{
 
     display: flex;
 }
 
-.quote-imgbb{
+.quote-img-po{
     margin-top: 40px;
     margin-left: 251px;
     width: 28px;
 height: 28px;
- 
 @media screen and (min-width: 768px) {
     width: 48px;
     height: 48px;
     margin-left: 512px;
-    margin-top: 32px;
+    margin-top: 20px;
 
 }
 @media screen and (min-width: 1440px) {
@@ -65,7 +64,7 @@ height: 28px;
 @media screen and (min-width: 768px) {
     width: 736px;
     height: 302px;
-    padding-top: 16px;
+    padding-top: 13px;
 padding-left:80px;
 
 }
@@ -77,33 +76,59 @@ height: 302px;
 }
 
 .text-up-main {
-   
     color: #F6F6F6;
     padding-bottom: 14px;
+    
+    color: #F6F6F6;
+
     font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "DM Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    
     @media screen and (min-width: 768px) {
         padding-bottom: 16px;
-        font-size: 24px;
-        font-feature-settings: 'clig' off, 'liga' off;
         font-family: "DM Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px;
     }
     
 }
 .text {
     color: rgba(246, 246, 246, 0.60);
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
     padding-bottom: 14px;
     padding-right: 64px;
+    
     @media screen and (min-width: 768px) {
         padding-bottom: 25px;
-    
-
+        color: rgba(246, 246, 246, 0.60);
+        font-family: "DM Sans";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
     }
 }
 
 
 .text-down-main {
     color: #F6F6F6;
+    color: #F6F6F6;
 
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px
     
 }
 
