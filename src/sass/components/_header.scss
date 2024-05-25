@@ -1,12 +1,13 @@
 .header {
   position: absolute;
   top: 40px;
-  z-index: 5;
+  z-index: 2;
 }
 .header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: transparent;
 }
 .header__list {
   display: none;
@@ -42,7 +43,11 @@
     margin-right: 12px;
   }
 }
-
+.header__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .header__link svg {
   fill: #7e847f;
 }
