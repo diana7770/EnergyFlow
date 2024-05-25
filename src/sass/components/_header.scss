@@ -22,15 +22,21 @@
 }
 
 .header__logo {
-  color: #1b1b1b;
-  font-family: "DM Sans";
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 28px;
-  letter-spacing: -0.56px;
-  margin-left: 48px;
-  // margin-right: 397px;
+  font-size: 16px;
+  margin-left: 20px;
+  @media screen and (min-width: 768px) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: 1440px) {
+    color: #1b1b1b;
+    font-family: "DM Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.56px;
+    margin-left: 48px;
+  }
 }
 
 .header__item {
@@ -55,6 +61,7 @@
 .header__svg--mobile {
   width: 32px;
   height: 16px;
+  margin-right: 20px;
   @media screen and (min-width: 768px) {
     display: none;
   }
