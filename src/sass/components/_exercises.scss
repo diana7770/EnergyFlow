@@ -1,10 +1,24 @@
-.exercises {
+.container {
   border-radius: 50px;
   background: #e8e8e8;
-  padding-bottom: 64px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 64px;
-  padding-left: 48px;
-  padding-right: 48px;
+  @media screen and (min-width: 768px) {
+    padding-top: 64px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-bottom: 64px;
+    padding-top: 64px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+.exercises__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .exercises__title {
@@ -19,9 +33,12 @@
 }
 
 .filters {
-  display: inline-flex;
+  display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 6px;
+  @media screen and (min-width: 768px) {
+    gap: 8px;
+  }
 }
 
 .filters__item {
@@ -36,9 +53,14 @@
   align-items: center;
   border-radius: 30px;
   background: #f6f6f6;
-  width: 121px;
-  height: 44px;
   border: none;
+  @media screen and (min-width: 768px) {
+    height: 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 121px;
+    height: 44px;
+  }
 }
 
 .filters__btn:active {
@@ -82,30 +104,28 @@
   text-align: center;
 }
 
-.exercises__item-body{
+.exercises__item-body {
   width: 424px;
   height: 141px;
   border-radius: 15px;
-  background: #FFF;
+  background: #fff;
 }
-.h-top{
-  
-  color: #F6F6F6;
+.h-top {
+  color: #f6f6f6;
   font-size: 12px;
   display: inline-flex;
-padding: 5px 8px;
-border-radius: 15px;
-background: #7E847F;
+  padding: 5px 8px;
+  border-radius: 15px;
+  background: #7e847f;
 }
 
 .text-start-to {
   font-size: 16px;
 }
 
-
 .img-svg-bb {
   width: 18px;
-height: 18px;
+  height: 18px;
 }
 .star-num {
   margin-left: 16px;
@@ -130,7 +150,6 @@ height: 18px;
 }
 
 .buttom-sec {
-  
   margin-bottom: 16px;
   margin-top: 16px;
   display: flex;
@@ -139,10 +158,10 @@ height: 18px;
 
 .img-svg-bb-run {
   margin-right: 16px;
-  background-color: #7E847F;
+  background-color: #7e847f;
   border-radius: 20px;
   width: 24px;
-height: 24px;
+  height: 24px;
 }
 .text-buttom-no {
   font-size: 12px;
@@ -152,7 +171,7 @@ height: 24px;
   margin-left: 16px;
   margin-right: 4px;
   font-size: 12px;
-  color: rgba(27, 27, 27, 0.40);
+  color: rgba(27, 27, 27, 0.4);
 }
 
 .pagination__text {
