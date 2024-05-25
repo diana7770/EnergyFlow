@@ -33,21 +33,21 @@ border-radius: 50px;
 }
 
 .quote-img-galothka{
-    margin-top: 40px;
-    margin-left: 251px;
+   
+position: absolute;
+top: 45.6px;
+right: 23.6px;
     width: 28px;
 height: 28px;
 @media screen and (min-width: 768px) {
     width: 48px;
     height: 48px;
-    margin-left: 512px;
-    margin-top: 20px;
+    top: 41.6px;
+    right: 86.17px;
 
 }
 @media screen and (min-width: 1440px) {
-    margin-left: 498px;
-    width: 48px;
-    height: 48px;
+    right: 70.17px;
 }
 }
 .text-quote-box {
@@ -56,15 +56,15 @@ height: 28px;
 .quote__svg-text{
     background: #7E847F;
     border-radius: 50px;
-
+    position: relative;
     padding-left: 20px;
     width: 335px;
     height: 272px;
-
+    padding-top: 42px;
 @media screen and (min-width: 768px) {
     width: 736px;
     height: 302px;
-    padding-top: 13px;
+    padding-top: 64px;
 padding-left:80px;
 
 }
