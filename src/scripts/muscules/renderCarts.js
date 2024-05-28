@@ -1,10 +1,14 @@
 const list = document.querySelector(".exercises__list")
-
+let oneClick = 5
 
 console.log(list)
 list.addEventListener("click", async (event) => {
-    list.textContent = " "
-if (event.target.closest("li")) {
+    
+if (event.target.closest("li") && oneClick == 5) {
+  list.textContent = " "
+  oneClick + 5
+  oneClick = oneClick + 5
+  console.log(oneClick)
     const itemHide = event.target;
    let gg = itemHide.querySelector(".exercises__subtitle")
 
@@ -25,12 +29,13 @@ if (event.target.closest("li")) {
 
 
 function renderCarts({ bodyPart, burnedCalories, name, rating, target, time }) {
+ const str = name
   document.querySelector(".exercises__list").insertAdjacentHTML(
     "beforeend",
     `<li class="exercises__item-body">
                <div class="top-sec">
                  <h2 class="h-top">WORKOUT</h2>
-                 <p class="star-num">${rating}</p>
+                 <p class="star-num">${Math.floor(rating)}.0</p>
                  <img class="img-svg-bb" src="../imgs/svgs/star-bo.svg" alt="">
                <p class="text-start-to">Start</p>
                  <img class="img-svg-bb" src="../imgs/svgs/arrowstart-arrow.svg" alt="">
@@ -39,7 +44,7 @@ function renderCarts({ bodyPart, burnedCalories, name, rating, target, time }) {
       
                <div class="emdium-sec">
                  <img class="img-svg-bb-run" src="../imgs/svgs/running.svg" alt="">
-                 <h2 class="h-medium">${name}</h2>
+                 <h2 class="h-medium">${str.slice(0, 19)}</h2>
                </div>
       
       
