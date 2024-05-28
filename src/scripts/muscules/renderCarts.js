@@ -9,13 +9,14 @@ if (event.target.closest("li")) {
    let gg = itemHide.querySelector(".exercises__subtitle")
 
     const resp = await fetch(
-        `https://energyflow.b.goit.study/api/exercises?&equipment=barbell&keyword=pull&page=1&`
+        `https://energyflow.b.goit.study/api/exercises?muscles=lats&page=1&limit=10`
       );
       const { results } = await resp.json();
-      results.forEach(render);
+      console.log(results);
+      results.forEach(renderCarts);
       console.log(resp)
       console.log(itemHide)
-      console.log(gg.textContent)
+      
       console.log(results);
 }
 })
@@ -23,7 +24,7 @@ if (event.target.closest("li")) {
 
 
 
-function render({ bodyPart, burnedCalories, equipment, rating, target, time }) {
+function renderCarts({ bodyPart, burnedCalories, name, rating, target, time }) {
   document.querySelector(".exercises__list").insertAdjacentHTML(
     "beforeend",
     `<li class="exercises__item-body">
@@ -38,7 +39,7 @@ function render({ bodyPart, burnedCalories, equipment, rating, target, time }) {
       
                <div class="emdium-sec">
                  <img class="img-svg-bb-run" src="../imgs/svgs/running.svg" alt="">
-                 <h2 class="h-medium">${equipment}</h2>
+                 <h2 class="h-medium">${name}</h2>
                </div>
       
       
