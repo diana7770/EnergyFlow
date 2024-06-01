@@ -1,0 +1,109 @@
+.burger-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $titleColor;
+  z-index: 3;
+  transition-duration: 300ms;
+  transition-delay: 50ms;
+  transition-timing-function: ease-in-out;
+  @media screen and (min-width: 768px) {
+    display: none;
+    pointer-events: none;
+  }
+}
+.burger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $accentColor;
+  border-radius: 30px;
+  padding: 19px 20px 40px 20px;
+  width: 89.3vw;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media screen and (min-width: 430px) {
+    max-width: 380px;
+  }
+}
+.burger__logo {
+  color: $titleColor;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.burger__btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  & img {
+    filter: brightness(0) invert(1);
+  }
+}
+.burger__list {
+  display: block;
+  text-align: center;
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+}
+.burger__item:first-child {
+  margin-bottom: 16px;
+}
+.burger__item--active {
+  border-radius: 30px;
+  background: rgb(255, 255, 255);
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  width: 96px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  & .burger__link {
+    color: $textColor;
+  }
+}
+.burger__link {
+  color: $titleColor;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.burger__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.burger__social {
+  margin-right: 12px;
+  padding: 8px;
+  outline: 1px solid rgba(246, 246, 246, 0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 41px;
+  height: 41px;
+  &:last-child {
+    margin-right: 0;
+  }
+  & svg {
+    fill: $titleColor;
+  }
+}
+.burger--hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(50%);
+}
