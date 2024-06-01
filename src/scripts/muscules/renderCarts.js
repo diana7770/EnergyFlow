@@ -1,15 +1,23 @@
 const list = document.querySelector(".exercises__list");
 const title = document.querySelector(".exercises__title");
 const spanFis = document.getElementById("span-ss");
-
+const boxSserh = document.getElementById("box-searh");
 let oneClick = 5;
 
+
+function decreaseNumber() {
+    console.log('Currently at ' + oneClick);
+    oneClick -= 1;
+}
+
+setInterval(decreaseNumber, 2000);
 list.addEventListener("click", async (event) => {
-  if (event.target.closest("li") && oneClick == 5) {
+  if (event.target.closest("li") && oneClick <= 5) {
     spanFis.classList.remove("unFisitble");
+    boxSserh.classList.remove("unFisitble");
     list.textContent = " ";
-    oneClick + 5;
-    oneClick = oneClick + 5;
+    oneClick + 3;
+    oneClick = oneClick + 3;
 
     const itemHide = event.target;
     let gg = itemHide.querySelector(".exercises__subtitle");
