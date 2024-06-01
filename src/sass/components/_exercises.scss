@@ -35,6 +35,15 @@
     margin-bottom: 32px;
   }
 }
+.section-exesa-searh {
+  
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+  @media screen and (min-width: 1440px) {
+    display: flex;
+  }
+}
 
 .filters {
   display: flex;
@@ -194,24 +203,46 @@ line-height: 32px;
   width: 18px;
 height: 18px;
 }
+.inp-searh{
+  display: flex;
+  
+}
+
 .inpun-Search {
-  display: inline-flex;
-padding: 12px 208px 12px 14px;
+  
+  display: flex;
+padding: 12px 100px 12px 14px;
 align-items: center;
-gap: 10px;
 border-radius: 30px;
 background: #F6F6F6;
 border: 0px;
-margin-left: 525px;
+margin-top: 20px;
+margin-bottom: 40px;
 position: relative;
+@media screen and (min-width: 768px) {
+  padding: 12px 40px 12px 14px;
+  margin-top: 0px;
+  margin-left: 35px;
+}
+@media screen and (min-width: 1440px) {
+  margin-left: 630px;
+  padding: 12px 120px 12px 14px;
+}
 }
 .img-svg-serh {
- margin-left: 860px;
-
-
+ margin-left: 240px;
+margin-top: 30px;
   position: absolute;
   width: 18px;
 height: 18px;
+@media screen and (min-width: 768px) {
+  margin-left: 230px;
+  margin-top: 11px;
+}
+@media screen and (min-width: 1440px) {
+  margin-left: 900px;
+  margin-top: 12px;
+}
 }
 .star-num {
   margin-left: 16px;
