@@ -1,0 +1,56 @@
+.favorites__text-box {
+  padding-left: 16px;
+}
+.favorites__text-up {
+  color: #f6f6f6;
+  padding-bottom: 14px;
+
+  color: #f6f6f6;
+
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 16px;
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+  }
+}
+.favorites__text {
+  color: rgba(246, 246, 246, 0.6);
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  padding-bottom: 14px;
+  padding-right: 64px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 25px;
+    color: rgba(246, 246, 246, 0.6);
+    font-family: "DM Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.favorites__text-down {
+  color: #f6f6f6;
+  color: #f6f6f6;
+
+  font-family: "DM Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
