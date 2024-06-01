@@ -113,18 +113,77 @@
 }
 
 .exercises__item-body {
-  width: 424px;
-  height: 141px;
+list-style: none;
+  
+  width: 295px;
+height: 165px;
   border-radius: 15px;
   background: #fff;
+  @media screen and (min-width: 768px) {
+    width: 313px;
+height: 165px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 424px;
+  height: 141px;
+  }
 }
+.h-medium {
+  color: #1B1B1B;
+
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+
+  @media screen and (min-width: 768px) {
+    color: #1B1B1B;
+
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    color: #1B1B1B;
+
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: "DM Sans";
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 32px;
+  }
+
+ 
+}
+
+
+
 .h-top {
-  color: #f6f6f6;
+  color: #F6F6F6;
+  background: #7e847f;
+  font-family: "DM Sans";
   font-size: 12px;
-  display: inline-flex;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   padding: 5px 8px;
   border-radius: 15px;
-  background: #7e847f;
+  @media screen and (min-width: 768px) {
+   
+  }
+  @media screen and (min-width: 1440px) {
+    color: #f6f6f6;
+  font-size: 12px;
+  display: inline-flex;
+  
+  }
+ 
 }
 
 .text-start-to {
@@ -133,21 +192,78 @@
 
 .img-svg-bb {
   width: 18px;
-  height: 18px;
+height: 18px;
+}
+.inpun-Search {
+  display: inline-flex;
+padding: 12px 208px 12px 14px;
+align-items: center;
+gap: 10px;
+border-radius: 30px;
+background: #F6F6F6;
+border: 0px;
+margin-left: 525px;
+position: relative;
+}
+.img-svg-serh {
+ margin-left: 860px;
+
+
+  position: absolute;
+  width: 18px;
+height: 18px;
 }
 .star-num {
   margin-left: 16px;
-  margin-right: 4px;
+  margin-right: 2px;
+  color: #1B1B1B;
+
+font-feature-settings: 'clig' off, 'liga' off;
+font-family: "DM Sans";
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px;
+  @media screen and (min-width: 768px) {
+    color: #1B1B1B;
+
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: "DM Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-left: 16px;
+    margin-right: 4px;
+  
+  }
 }
 .text-start-to {
-  margin-left: 201px;
+  margin-left: 79px;
   margin-right: 8px;
+  @media screen and (min-width: 768px) {
+    margin-left: 89px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-left: 201px;
+    
+  }
 }
 .top-sec {
-  padding-left: 18px;
+  padding-left: 16px;
   padding-top: 16px;
   display: flex;
   align-items: center;
+  @media screen and (min-width: 768px) {
+    
+  }
+  @media screen and (min-width: 1440px) {
+    padding-left: 18px;
+  padding-top: 16px;
+    
+  }
 }
 
 .emdium-sec {
@@ -158,6 +274,7 @@
 }
 
 .buttom-sec {
+  flex-wrap: wrap;
   margin-bottom: 16px;
   margin-top: 16px;
   display: flex;
@@ -190,6 +307,20 @@
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0.96px;
+}
+
+.pagination__span {
+  color: rgba(27, 27, 27, 0.4);
+  font-family: "DM Sans";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.96px;
+}
+
+.unFisitble{
+  display: none;
 }
 
 .pagination {
