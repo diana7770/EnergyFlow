@@ -7,9 +7,9 @@ inp.addEventListener("keypress", async (event) => {
   if (event.key === "Enter") {
     console.log(123)
     list.textContent = " ";
- 
+ console.log(inp.value)
     const resp = await fetch(
-      `https://energyflow.b.goit.study/api/exercises?muscles=${inp.value}&page=1&limit=10`
+      `https://energyflow.b.goit.study/api/exercises?muscles=${document.querySelector(".exercises__list").dataset.muscles.toLowerCase()}&keyword=${inp.value.toLowerCase()}&page=1&limit=10`
     );
     const { results } = await resp.json();
     results.forEach(renderCartsSerh);
