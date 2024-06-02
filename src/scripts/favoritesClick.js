@@ -1,6 +1,6 @@
 const btnFavorite = document.querySelector(".favorites__btn");
 const btnHome = document.querySelector(".home__btn");
-const main = document.querySelector(".main");
+const main = document.querySelector("main");
 
 btnFavorite.addEventListener("click", function () {
   btnFavorite.style.background = "#fff";
