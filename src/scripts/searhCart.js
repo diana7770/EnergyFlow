@@ -1,7 +1,7 @@
 const inp = document.querySelector(".inpun-Search")
 const list = document.querySelector(".exercises__list");
 
-
+console.log(123)
 
 inp.addEventListener("keypress", async (event) => {
   if (event.key === "Enter") {
