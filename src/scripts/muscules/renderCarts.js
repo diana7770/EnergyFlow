@@ -5,12 +5,12 @@ const boxSserh = document.getElementById("box-searh");
 let oneClick = 5;
 
 
-function decreaseNumber() {
-    console.log('Currently at ' + oneClick);
-    oneClick -= 1;
-}
+// function decreaseNumber() {
+//     console.log('Currently at ' + oneClick);
+//     oneClick -= 1;
+// }
 
-setInterval(decreaseNumber, 2000);
+// setInterval(decreaseNumber, 2000);
 list.addEventListener("click", async (event) => {
   if (event.target.closest("li") && oneClick <= 5) {
     spanFis.classList.remove("unFisitble");
