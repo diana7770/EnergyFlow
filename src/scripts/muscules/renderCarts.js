@@ -2,7 +2,8 @@ const list = document.querySelector(".exercises__list");
 const title = document.querySelector(".exercises__title");
 const spanFis = document.getElementById("span-ss");
 const boxSserh = document.getElementById("box-searh");
-let oneClick = 5;
+const renmSpan = document.querySelector(".renm-sp");
+const pagination = document.querySelector(".pagination");
 
 
 // function decreaseNumber() {
@@ -12,32 +13,95 @@ let oneClick = 5;
 
 // setInterval(decreaseNumber, 2000);
 list.addEventListener("click", async (event) => {
-  if (event.target.closest("li") && oneClick <= 5) {
+  console.log(123);
+  if (event.target.closest("li")) {
+    const itemHide = event.target;
+    let nameCart = itemHide.querySelector(".exercises__subtitle").textContent;
+    list.remove();
+    document
+      .querySelector(".exercises .container")
+      .insertAdjacentHTML("beforeend", `<ul class=exercises__list data-muscles=${nameCart}></ul>`);
+
+
+    pagination.remove();
+
+    
+    
     spanFis.classList.remove("unFisitble");
     boxSserh.classList.remove("unFisitble");
-    list.textContent = " ";
-    oneClick + 3;
-    oneClick = oneClick + 3;
+    list.innerHTML = " ";
 
-    const itemHide = event.target;
-    let gg = itemHide.querySelector(".exercises__subtitle");
 
+    // console.log(renmSpan)
+    renmSpan.textContent = nameCart;
+    console.log(nameCart.toLowerCase());
     const resp = await fetch(
-      `https://energyflow.b.goit.study/api/exercises?muscles=lats&page=1&limit=10`
+      `https://energyflow.b.goit.study/api/exercises?muscles=${nameCart.toLowerCase()}&page=1&limit=10`
     );
-    const { results } = await resp.json();
-    results.forEach(renderCarts);
+    const data = await resp.json();
+    console.log(data)
+    document
+      .querySelector(".exercises .container")
+      .insertAdjacentHTML("beforeend", "<ul class=pagination></ul>");
+    for (let i = 1; i <= data.totalPages; i++) {
+      console.log(1)
+      document.querySelector(".pagination").insertAdjacentHTML(
+        "beforeend",
+        `<li class="pagination__item">
+      <p class="pagination__text">${i}</p>
+    </li>`
+      );
+      if (i === 1) {
+        document.querySelector(".pagination__item").classList.add("pagination__item--active")
+      }
+    }
+    data.results.forEach(renderCarts);
+
+
+    document.querySelector(".pagination").addEventListener("click", async (e) => {
+      console.log(123)
+      if (e.target.nodeName === "LI" || e.target.nodeName === "P") {
+        let newPage = 1;
+        if (
+          e.target.classList.contains("pagination__item--active") ||
+          e.target.parentNode.classList.contains("pagination__item--active")
+        )
+          return;
+        if (e.target.nodeName === "LI") {
+          Array.from(e.target.parentNode.children).forEach((child) =>
+            child.classList.remove("pagination__item--active")
+          );
+          e.target.classList.add("pagination__item--active");
+    
+          newPage = Number(e.target.querySelector("p").textContent);
+        } else {
+          Array.from(e.target.parentNode.parentNode.children).forEach((child) =>
+            child.classList.remove("pagination__item--active")
+          );
+          e.target.parentNode.classList.add("pagination__item--active");
+          newPage = Number(e.target.textContent);
+        }
+        document.querySelector(".exercises__list").innerHTML = "";
+        const resp = await fetch(
+        `https://energyflow.b.goit.study/api/exercises?muscles=${document.querySelector(".exercises__list").dataset.muscles.toLowerCase()}&page=${newPage}&limit=10`
+        );
+        const { results } = await resp.json();
+        results.forEach(renderCarts)
+      }
+    });
+    
   }
 });
 
 function renderCarts({ bodyPart, burnedCalories, name, rating, target, time }) {
   const str = name;
+  // console.log(str)
   document.querySelector(".exercises__list").insertAdjacentHTML(
     "beforeend",
     `<li class="exercises__item-body">
                <div class="top-sec">
                  <h2 class="h-top">WORKOUT</h2>
-                 <p class="star-num">${Math.floor(rating)}.0</p>
+                 <p class="star-num">${rating.toFixed(1)}</p>
                  <img class="img-svg-bb" src="../imgs/svgs/star-bo.svg" alt="">
                <p class="text-start-to">Start</p>
                  <img class="img-svg-bb" src="../imgs/svgs/arrowstart-arrow.svg" alt="">
@@ -46,7 +110,8 @@ function renderCarts({ bodyPart, burnedCalories, name, rating, target, time }) {
       
                <div class="emdium-sec">
                  <img class="img-svg-bb-run" src="../imgs/svgs/running.svg" alt="">
-                 <h2 class="h-medium">${str.slice(0, 19)}...</h2>
+                 <h2 class="h-medium">
+                 ${str.slice(0, 19)}...</h2>
                </div>
       
       
