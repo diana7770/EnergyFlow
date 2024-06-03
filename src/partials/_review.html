@@ -1,0 +1,72 @@
+<div class="review-backdrop review-backdrop--hidden">
+  <div class="review">
+    <button class="review__close-btn" type="button" data-review-close>
+      <img
+        class="review__close-svg"
+        src="../imgs/svgs/close-icon.svg"
+        alt="review popup icon"
+      />
+    </button>
+    <form class="review__form" action>
+      <label class="review__label" for="rating">Rating</label>
+      <div class="review-block">
+        <input
+          class="review__rating"
+          id="rating"
+          name="rating"
+          type="number"
+          placeholder="0.0"
+        />
+        <ul class="review__list">
+          <li class="rating__item">
+            <img
+              class="rating__star"
+              src="../imgs/svgs/star-bo.svg"
+              alt="star"
+            />
+          </li>
+          <li class="rating__item">
+            <img
+              class="rating__star"
+              src="../imgs/svgs/star-bo.svg"
+              alt="star"
+            />
+          </li>
+          <li class="rating__item">
+            <img
+              class="rating__star"
+              src="../imgs/svgs/star-bo.svg"
+              alt="star"
+            />
+          </li>
+          <li class="rating__item">
+            <img
+              class="rating__star"
+              src="../imgs/svgs/star-bo.svg"
+              alt="star"
+            />
+          </li>
+          <li class="rating__item">
+            <img
+              class="rating__star"
+              src="../imgs/svgs/star-bo.svg"
+              alt="star"
+            />
+          </li>
+        </ul>
+      </div>
+      <input
+        class="review__input"
+        name="email"
+        placeholder="Email"
+        type="text"
+      />
+      <textarea
+        name="comment"
+        placeholder="Your comment"
+        class="review__textarea"
+      ></textarea>
+      <button type="submit" class="review__btn">Send</button>
+    </form>
+  </div>
+</div>
