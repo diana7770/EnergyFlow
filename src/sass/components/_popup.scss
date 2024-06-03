@@ -58,6 +58,7 @@
   width: 295px;
   height: 258px;
   background-color: gray;
+  background-size: contain;
   border-radius: 12px;
   @media screen and (min-width: 768px) {
     width: 270px;
@@ -172,7 +173,6 @@
   padding-right: 109px;
   padding-left: 60px;
   &:last-child {
-    
     padding-right: 0;
     padding-left: 0;
     background-color: transparent;
