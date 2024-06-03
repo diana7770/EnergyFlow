@@ -95,6 +95,7 @@ list.addEventListener("click", async (event) => {
 
 function renderCarts({ bodyPart, burnedCalories, name, rating, target, time }) {
   const str = name;
+  const str2 = target;
   // console.log(str)
   document.querySelector(".exercises__list").insertAdjacentHTML(
     "beforeend",
@@ -118,7 +119,7 @@ function renderCarts({ bodyPart, burnedCalories, name, rating, target, time }) {
       <div class="buttom-sec">
                 <p class="text-buttom-all">Burned calories: <p class="text-buttom-no">${burnedCalories} / ${time} min</p></p>
                 <p class="text-buttom-all">Body part: <p class="text-buttom-no">${bodyPart}</p></p>
-      <p class="text-buttom-all">Target: <p class="text-buttom-no">${target}</p></p>
+      <p class="text-buttom-all">Target: <p class="text-buttom-no">${str2.slice(0, 7)}...</p></p>
                </div>
              </li>`
   );
