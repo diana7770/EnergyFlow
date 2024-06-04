@@ -7,7 +7,7 @@
         alt="review popup icon"
       />
     </button>
-    <form class="review__form" action>
+    <form class="review__form" data-review-form>
       <label class="review__label" for="rating">Rating</label>
       <div class="review-block">
         <input
@@ -16,6 +16,7 @@
           name="rating"
           type="number"
           placeholder="0.0"
+          step="0.1"
         />
         <ul class="review__list">
           <li class="rating__item">
@@ -65,6 +66,8 @@
         name="comment"
         placeholder="Your comment"
         class="review__textarea"
+        minlength="5"
+        maxlength="1000"
       ></textarea>
       <button type="submit" class="review__btn">Send</button>
     </form>
