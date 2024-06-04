@@ -24,3 +24,15 @@ button {
     width: 1408px;
   }
 }
+.toast-container {
+  z-index: 12;
+  border: none;
+  outline: none;
+}
+.toast {
+  border: none;
+  outline: none;
+}
+.progress::before {
+  background: $accentColor !important;
+}
