@@ -121,9 +121,10 @@ export default function popupListener() {
     if (e.target.dataset.giveRating) {
       const id = e.currentTarget.dataset.id;
       e.currentTarget.classList.add("popup--hidden");
-      document
-        .querySelector(".review-backdrop")
-        .classList.remove("review-backdrop--hidden");
+      const reviewModal = document.querySelector(".review-backdrop");
+      reviewModal.setAttribute("data-id", id);
+      reviewModal.classList.remove("review-backdrop--hidden");
+
       document.querySelector(".review__rating").value = Number(
         refs.ratingTextEl.textContent
       );
