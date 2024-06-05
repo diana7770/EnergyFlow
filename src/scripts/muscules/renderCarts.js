@@ -35,6 +35,12 @@ list.addEventListener("click", async (event) => {
     // console.log(renmSpan)
     renmSpan.textContent = nameCart;
     console.log(nameCart.toLowerCase());
+    Array.from(document.querySelector(".filters").children).forEach((item) =>
+      item.classList.remove("filters__item--active")
+    );
+    document
+      .querySelector(".filters")
+      .children[1].classList.add("filters__item--active");
     const resp = await fetch(
       `https://energyflow.b.goit.study/api/exercises?muscles=${nameCart.toLowerCase()}&page=1&limit=10`
     );
