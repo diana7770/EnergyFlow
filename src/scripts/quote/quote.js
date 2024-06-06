@@ -14,16 +14,16 @@ async function loadQuote() {
   renderQuote(data);
 }
 
-
-if (
-  new Date().getDate() !==
-  JSON.parse(localStorage.getItem("quote")).date
-) {
-  loadQuote();
-} else {
-  try {
-    renderQuote(JSON.parse(localStorage.getItem("quote")));
-  } catch (err) {
-    console.log(err);
+if (JSON.parse(localStorage.getItem("quote"))) {
+  if (new Date().getDate() !== JSON.parse(localStorage.getItem("quote")).date) {
+    loadQuote();
+  } else {
+    try {
+      renderQuote(JSON.parse(localStorage.getItem("quote")));
+    } catch (err) {
+      console.log(err);
+    }
   }
+} else {
+  loadQuote();
 }

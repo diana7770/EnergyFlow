@@ -13,12 +13,13 @@ function render({ name, filter, imgUrl }) {
   );
 }
 
-async function renderMuscules() {
+export default async function renderMuscules() {
   const resp = await fetch(
     "https://energyflow.b.goit.study/api/filters?filter=Muscles&page=1&limit=12"
   );
-  const { results } = await resp.json();
-  results.forEach(render);
+  const data = await resp.json();
+  data.results.forEach(render);
+  return data.totalPages;
 }
 document.querySelector(".pagination").addEventListener("click", async (e) => {
   if (e.target.nodeName === "LI" || e.target.nodeName === "P") {
