@@ -7,9 +7,9 @@ inp.addEventListener("keypress", async (event) => {
   if (event.key === "Enter") {
     console.log(123)
     list.textContent = " ";
- 
+ console.log(inp.value)
     const resp = await fetch(
-      `https://energyflow.b.goit.study/api/exercises?muscles=${inp.value}&page=1&limit=10`
+      `https://energyflow.b.goit.study/api/exercises?muscles=${document.querySelector(".exercises__list").dataset.muscles.toLowerCase()}&keyword=${inp.value.toLowerCase()}&page=1&limit=10`
     );
     const { results } = await resp.json();
     results.forEach(renderCartsSerh);
@@ -18,6 +18,7 @@ inp.addEventListener("keypress", async (event) => {
 
 function renderCartsSerh({ bodyPart, burnedCalories, name, rating, target, time }) {
     const str = name;
+    const str2 = target;
     document.querySelector(".exercises__list").insertAdjacentHTML(
       "beforeend",
       `<li class="exercises__item-body">
@@ -39,7 +40,7 @@ function renderCartsSerh({ bodyPart, burnedCalories, name, rating, target, time 
         <div class="buttom-sec">
                   <p class="text-buttom-all">Burned calories: <p class="text-buttom-no">${burnedCalories} / ${time} min</p></p>
                   <p class="text-buttom-all">Body part: <p class="text-buttom-no">${bodyPart}</p></p>
-        <p class="text-buttom-all">Target: <p class="text-buttom-no">${target}</p></p>
+        <p class="text-buttom-all">Target: <p class="text-buttom-no">${str2.slice(0, 7)}...</p></p>
                  </div>
                </li>`
     );

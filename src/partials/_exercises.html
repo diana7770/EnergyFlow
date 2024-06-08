@@ -1,30 +1,34 @@
 <section class="exercises">
   <div class="container">
-    <h2 class="exercises__title">Exercises<span id="span-ss" class="pagination__span unFisitble"><span class="exercises__title"> / </span>Waist</span></h2>
+    <h2 class="exercises__title">
+      Exercises<span id="span-ss" class="pagination__span unFisitble">
+        <span class="exercises__title"> / </span>
+        <span class="renm-sp">Waist</span></span
+      >
+    </h2>
     <div class="section-exesa-searh">
-
-   
-    <ul class="filters">
-      <li class="filters__item filters__item--active">
-        <button class="filters__btn">Muscles</button>
-      </li>
-      <li class="filters__item">
-        <button class="filters__btn">Body parts</button>
-      </li>
-      <li class="filters__item">
-        <button class="filters__btn">Equipment</button>
-      </li>
-      
-    </ul>
-    <div id="box-searh" class="inp-searh unFisitble">
-        <input class="inpun-Search" type="text" placeholder="Search">
-        <img class="img-svg-serh" src="../imgs/svgs/searchsearh.svg" alt="">
+      <ul class="filters">
+        <li class="filters__item filters__item--active" data-filter="muscles">
+          <button class="filters__btn" data-filter="muscles">Muscles</button>
+        </li>
+        <li class="filters__item" data-filter="bodyparts">
+          <button class="filters__btn" data-filter="bodyparts">
+            Body parts
+          </button>
+        </li>
+        <li class="filters__item" data-filter="equipment">
+          <button class="filters__btn" data-filter="equipment">
+            Equipment
+          </button>
+        </li>
+      </ul>
+      <div id="box-searh" class="inp-searh unFisitble">
+        <input class="inpun-Search" type="text" placeholder="Search" />
+        <img class="img-svg-serh" src="../imgs/svgs/searchsearh.svg" alt="" />
+      </div>
     </div>
-  </div>
-    <ul class="exercises__list">
-    </ul>
 
-
+    <ul class="exercises__list"></ul>
 
     <ul class="pagination">
       <li class="pagination__item pagination__item--active">
@@ -34,7 +38,5 @@
         <p class="pagination__text">2</p>
       </li>
     </ul>
-    
-      
-  
+  </div>
 </section>
