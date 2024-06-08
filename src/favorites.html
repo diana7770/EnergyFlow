@@ -20,6 +20,59 @@
     <link rel="stylesheet" href="./sass/index.scss" />
   </head>
   <body>
+    <header class="header">
+      <div class="container">
+        <h2 class="header__logo">energy.flow</h2>
+        <div class="header-block">
+          <a href="/">
+            <button type="button" class="header__btn home__btn">Home</button></a
+          >
+          <a href="../favorites.html"
+            ><button type="button" class="header__btn favorites__btn">
+              Favorites
+            </button></a
+          >
+        </div>
+
+        <img
+          class="header__svg--mobile"
+          src="../imgs/svgs/burger.svg"
+          alt="burger"
+        />
+
+        <img
+          class="header__svg--mobile"
+          src="../imgs/svgs/burger.svg"
+          alt="burger"
+          data-burger-open
+        />
+
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="https://facebook.com" class="header__link">
+              <svg width="28" height="28" class="header-svg">
+                <use href="../imgs/symbol-defs.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="https://instagram.com" class="header__link">
+              <svg width="28" height="28" class="header-svg">
+                <use href="../imgs/symbol-defs.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="https://youtube.com" class="header__link">
+              <svg width="28" height="28" class="header-svg">
+                <use href="../imgs/symbol-defs.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
     <section class="daily">
       <div class="container">
         <div class="quote__svg-text">
@@ -40,11 +93,43 @@
             </div>
           </div>
         </div>
-      </div>
-      <picture>
 
-      </picture>
-      
+        <picture>
+          <source
+            media="(min-width: 1440px)"
+            srcset="
+              ../imgs/favorites/favorites-pc.png    1x,
+              ../imgs/favorites/favorites-pc@2x.png 2x
+            "
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              ../imgs/favorites/favorites-mob.png    1x,
+              ../imgs/favorites/favorites-mob@2x.png 2x
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ../imgs/favorites/favorites-tab.png    1x,
+              ../imgs/favorites/favorites-tab@2x.png 2x
+            "
+          />
+          <img
+            src="../imgs/favorites/favorites-pc.png"
+            alt="girl"
+            class="favorite__img"
+          />
+        </picture>
+        <div class="daily-norm">
+          <div class="daily-norm__content">
+          <img class="daily-norm__svg" src="./imgs/svgs/favorite.svg" alt="" />
+          <h5 class="daily-norm__time">110 min</h5>
+          <p class="daily-norm__text">Daily norm of sports</p>
+        </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>
