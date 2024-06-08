@@ -28,17 +28,11 @@
             <button type="button" class="header__btn home__btn">Home</button></a
           >
           <a href="../favorites.html"
-            ><button type="button" class="header__btn favorites__btn">
+            ><button type="button" class="header__btn header__btn--active">
               Favorites
             </button></a
           >
         </div>
-
-        <img
-          class="header__svg--mobile"
-          src="../imgs/svgs/burger.svg"
-          alt="burger"
-        />
 
         <img
           class="header__svg--mobile"
@@ -124,12 +118,29 @@
         </picture>
         <div class="daily-norm">
           <div class="daily-norm__content">
-          <img class="daily-norm__svg" src="./imgs/svgs/favorite.svg" alt="" />
-          <h5 class="daily-norm__time">110 min</h5>
-          <p class="daily-norm__text">Daily norm of sports</p>
-        </div>
+            <img
+              class="daily-norm__svg"
+              src="./imgs/svgs/favorite.svg"
+              alt=""
+            />
+            <h5 class="daily-norm__time">110 min</h5>
+            <p class="daily-norm__text">Daily norm of sports</p>
+          </div>
         </div>
       </div>
     </section>
+    <section class="favorites">
+      <h4 class="favorites__title">Favorites</h4>
+      <div class="favorites__content">
+      <img class="favorites__svg" src="./imgs/dumbbell.png" alt="dumbbell" />
+      <p class="favorites__text">
+        It appears that you haven't added any exercises to your favorites yet.
+        To get started, you can add exercises that you like to your favorites
+        for easier access in the future.
+      </p>
+    </div>
+    </section>
+    <load ="partials/_burgerMenu.html" />
+    <script src="./scripts/burgerMenu.js"></script>
   </body>
 </html>

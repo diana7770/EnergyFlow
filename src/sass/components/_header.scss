@@ -1,6 +1,9 @@
 .header {
   position: absolute;
   top: 40px;
+  // right: 50%;
+  // left: 50%;
+  // transform: translate(0, -50%);
   z-index: 2;
 }
 .header .container {
@@ -115,12 +118,7 @@
   color: #f6f6f6;
 }
 
-.home__btn {
-  border-radius: 30px;
+.header__btn--active {
   background: #fff;
   color: #1b1b1b;
-}
-
-.favorites__btn{
-color: #1b1b1b;
 }
