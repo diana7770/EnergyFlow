@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "vite --host",
-    "build": "vite build --base=/dist/",
+    "build": "vite build --base=/",
     "preview": "vite preview --port 8080"
   },
   "devDependencies": {
