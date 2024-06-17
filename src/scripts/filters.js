@@ -1,4 +1,5 @@
 import renderMuscules from "./muscules/musculesRender";
+import { renderCartsFn } from "./muscules/renderCarts";
 function render({ name, filter, imgUrl }) {
   document.querySelector(".exercises__list").insertAdjacentHTML(
     "beforeend",
@@ -70,7 +71,7 @@ document.querySelector(".filters").addEventListener("click", async (e) => {
             results.forEach(render);
           }
         });
-        
+        renderCartsFn();
       break;
     case "bodyparts":
       break;
