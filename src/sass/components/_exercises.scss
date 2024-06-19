@@ -24,12 +24,13 @@
 
 .exercises__title {
   font-size: 32px;
+  color: #1b1b1b;
+  font-family: "DM Sans";
+  font-weight: 400;
+margin-bottom: 20px;
   @media screen and (min-width: 768px) {
-    color: #1b1b1b;
-    font-family: "DM Sans";
     font-size: 44px;
-    font-style: normal;
-    font-weight: 400;
+    // font-style: normal;
     line-height: 48px;
     letter-spacing: -0.88px;
     margin-bottom: 32px;

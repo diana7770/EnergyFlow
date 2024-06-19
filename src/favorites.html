@@ -77,13 +77,13 @@
 
             <div class="text-quote-box">
               <h3 class="text-up-main">Quote of the day</h3>
-              <p class="quote__text">
+              <p class="quote__text" data-quote-text>
                 A lot of times I find that people who are blessed with the most
                 talent don't ever develop that attitude, and the ones who aren't
                 blessed in that way are the most competitive and have the
                 biggest heart.
               </p>
-              <h5 class="text-down-main">Tom Brady</h5>
+              <h5 class="text-down-main" data-quote-author>Tom Brady</h5>
             </div>
           </div>
         </div>
@@ -143,6 +143,11 @@
     </section>
     <load ="partials/_burgerMenu.html" />
     <script src="./scripts/burgerMenu.js"></script>
+    <script>
+      document.querySelector(".burger__item--active").classList.remove("burger__item--active");
+      document.querySelector(".burger__list").children[1].classList.add("burger__item--active")
+    </script>
+    <script src="./scripts/quote/quote.js"></script>
     <script src="./scripts/favorites/favorites.js"></script>
   </body>
 </html>

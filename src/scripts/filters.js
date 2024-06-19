@@ -71,7 +71,13 @@ document.querySelector(".filters").addEventListener("click", async (e) => {
             results.forEach(render);
           }
         });
-        renderCartsFn();
+      document.querySelector(".exercises__title").innerHTML = "";
+      document.querySelector(".exercises__title").textContent = "Exercises";
+      document.querySelector("#box-searh").classList.add("unFisitble");
+      document
+        .querySelector(".pagination")
+        .children[0].classList.add("pagination__item--active");
+      renderCartsFn();
       break;
     case "bodyparts":
       break;
