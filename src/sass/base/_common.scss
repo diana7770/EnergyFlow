@@ -13,10 +13,13 @@ button {
   cursor: pointer;
 }
 .container {
+  width: auto;
   margin-left: auto;
   margin-right: auto;
   border-radius: 50px;
-  width: 335px;
+  @media screen and (min-width: 380px) {
+    width: 335px;
+  }
   @media screen and (min-width: 768px) {
     width: 736px;
   }
