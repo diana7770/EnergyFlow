@@ -136,12 +136,12 @@ export function renderCartsFn() {
       
       
       <div class="buttom-sec">
-                <p class="text-buttom-all">Burned calories: <p class="text-buttom-no">${burnedCalories} / ${time} min</p></p>
-                <p class="text-buttom-all">Body part: <p class="text-buttom-no">${bodyPart}</p></p>
-      <p class="text-buttom-all">Target: <p class="text-buttom-no">${str2.slice(
+                <p class="text-buttom-all">Burned calories: <span class="text-buttom-no">${burnedCalories} / ${time} min</span></p>
+                <p class="text-buttom-all">Body part: <span class="text-buttom-no">${bodyPart}</span></p>
+      <p class="text-buttom-all">Target: <span class="text-buttom-no">${str2.slice(
         0,
         7
-      )}...</p></p>
+      )}...</span></p>
                </div>
              </li>`
     );
