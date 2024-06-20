@@ -75,7 +75,13 @@
 }
 
 .daily {
-  padding-top: 156px;
+  padding-top: 96px;
+  @media screen and (min-width: 768px) {
+     padding-top: 156px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-top: 156px;
+  }
 }
 
 .daily-norm__svg {
@@ -143,11 +149,33 @@
 .favorites__title {
   color: #1b1b1b;
   font-family: "DM Sans";
-  font-size: 44px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 400;
-  line-height: 48px;
-  letter-spacing: -0.88px;
+  line-height: 32px; /* 100% */
+  letter-spacing: -0.64px;
+  width: 128px;
+  height: 32px;
+  @media screen and (min-width: 768px) {
+    color: #1b1b1b;
+    font-family: "DM Sans";
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px; /* 109.091% */
+    letter-spacing: -0.88px;
+    width: 176px;
+    height: 48px;
+  }
+  @media screen and (min-width: 1440px) {
+    color: #1b1b1b;
+    font-family: "DM Sans";
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: -0.88px;
+  }
 }
 
 .favorites__svg {
@@ -176,7 +204,5 @@
   display: block;
   align-items: center;
   justify-content: center;
-  margin-right: 91px;
-  margin-left: 91px;
   padding-bottom: 258px;
 }
