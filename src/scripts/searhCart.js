@@ -1,13 +1,10 @@
 const inp = document.querySelector(".inpun-Search")
 const list = document.querySelector(".exercises__list");
 
-console.log(123)
 
 inp.addEventListener("keypress", async (event) => {
   if (event.key === "Enter") {
-    console.log(123)
-    list.textContent = " ";
- console.log(inp.value)
+    document.querySelector(".exercises__list").innerHTML = " ";
     const resp = await fetch(
       `https://energyflow.b.goit.study/api/exercises?muscles=${document.querySelector(".exercises__list").dataset.muscles.toLowerCase()}&keyword=${inp.value.toLowerCase()}&page=1&limit=10`
     );
