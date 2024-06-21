@@ -44,16 +44,26 @@ function deleteFromFavoritesFn(e) {
   renderFavorites();
 }
 
-if (localStorage.getItem("favorites")) {
-  renderFavorites();
-  document
-    .querySelector(".exercises__list")
-    .addEventListener("click", deleteFromFavoritesFn);
-} else {
-  document
-    .querySelector(".favorites__content")
-    .insertAdjacentHTML(
-      "beforeend",
-      "<img class='favorites__svg' src='./imgs/dumbbell.png' alt='dumbbell' /><p class='favorites__text'>It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future.</p>"
-    );
-}
+
+  if (localStorage.getItem("favorites")) {
+    if (!JSON.parse(localStorage.getItem("favorites"))[0]) {
+       
+      document
+      .querySelector(".favorites__content")
+      .insertAdjacentHTML(
+        "beforeend",
+        "<img class='favorites__svg' src='./imgs/dumbbell.png' alt='dumbbell' /><p class='favorites__text'>It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future.</p>"
+      );
+    }
+    renderFavorites();
+    document
+      .querySelector(".exercises__list")
+      .addEventListener("click", deleteFromFavoritesFn);
+  } else {
+    document
+      .querySelector(".favorites__content")
+      .insertAdjacentHTML(
+        "beforeend",
+        "<img class='favorites__svg' src='./imgs/dumbbell.png' alt='dumbbell' /><p class='favorites__text'>It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future.</p>"
+      );
+  }
